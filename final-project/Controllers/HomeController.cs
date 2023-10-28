@@ -64,6 +64,10 @@ namespace final_project.Controllers
         {
             return RedirectToAction("");
         }
+        public IActionResult lol()
+        {
+            return Content("what a fuck of that piece of shit nigga");
+        }
 
     }
 }

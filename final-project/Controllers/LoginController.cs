@@ -14,7 +14,7 @@ namespace final_project.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-
+          
             return View();
         }
         public IActionResult checklol(User user)
@@ -59,5 +59,11 @@ namespace final_project.Controllers
             return RedirectToAction("register");
 
         }
+        // new updated
+        public string IActionResult()
+        {
+            return "omar reda aladeeb";
+        }
+       
     }
 }
