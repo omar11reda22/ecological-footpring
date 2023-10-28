@@ -1,0 +1,47 @@
+﻿@page
+
+
+
+@{
+    Layout = "_Layout2";
+}
+
+<div class="login">
+    <div class="image">
+        <img src="~/images/1.jpg" alt="" />
+    </div>
+    <form id="account" method="post" asp-action="checklol" asp-controller="Login">
+        <h3>Welcome In Your Place To Clculate Your Carbon Footbrint</h3>
+        <input  type="email" placeholder="Email" />
+        <span  class="text-danger"></span>
+
+        <input  type="password" placeholder="password" />
+        <span  class="text-danger"></span>
+        <div class="reminder">
+            <input type="checkbox" name="remind" id="remind" />
+            <label  class="form-label">
+
+                
+            </label>
+        </div>
+        <!-- <input type="button" value="Login" /> -->
+        <button asp-action ="Home" asp-controller="Home" type="submit">Login</button>
+       
+         <p >
+            Don't have an accound yet? <a asp-action="register" asp-controller="Login" >register</a><br />
+            <br />
+            
+        </p>
+        <br />
+        <p>
+           
+        </p>
+
+
+        </p>
+    </form>
+</div>
+
+
+
+

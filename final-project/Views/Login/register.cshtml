@@ -1,0 +1,34 @@
+﻿@model final_project.Models.User;
+@model ;
+@model final_project.Models.City;
+
+@{
+    Layout = "_Layout2";
+    SelectList countrylist = new SelectList(ViewBag.country, "country_ID", "name");
+    SelectList governoratelist = new SelectList(ViewBag.governorate, "governorate_ID", "name");
+    SelectList citylist = new SelectList(ViewBag.city, "city_ID", "name");
+
+}
+
+<div class="login">
+      <div class="image">
+        <img src="~/images/1.jpg" alt="" />
+      </div>
+    <form method="post" asp-action="saveregister" asp-controller="Login">
+
+        <h3>Welcome In Your Place To Clculate Your Carbon Footbrint</h3>
+        <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+        @*   <input type="text" placeholder="first name" />
+        <input type="text" placeholder="last name" />*@
+        <input asp-for="Email"   type="email" placeholder="Email" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+        <input asp-for= "Password"  type="password" placeholder="password" />
+        <span asp-validation-for = "Password"  class="text-danger"></span>
+        <input  asp-for = "Confirmpwd"  type="password" placeholder="password confirmation" />
+        <span asp-validation-for = "Confirmpwd"  class="text-danger"></span>
+        <button type="submit">Sign Up</button>
+        <p>Already have an accound? <a asp-action="Index" asp-controller="Login">log in</a></p>
+      </form>
+    </div>
+
+
